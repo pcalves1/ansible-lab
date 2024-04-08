@@ -41,6 +41,8 @@ Nesse passo executaremos também o comando `sed` para substituir os IPs dos cont
 
 
 ### Criar e copiar chaves SSH
+
+##### Criar chave SSH
 Inicie uma conexão SSH com o container *wordpress* para criar uma chave pública de ambos os containeres com o seguinte comando. Entre com a senha definida no `ANSIBLE_PASSWORD=senha_ansible`. 
 
     ssh ansible@$(docker inspect wordpress --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}')
@@ -49,6 +51,8 @@ Repita o mesmo passo para o  container *mysql*:
 
     ssh ansible@$(docker inspect mysql --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}')
 
+
+##### Copiar chave SSH
 
 Em seguida execute o comando abaixo e digite **yes**. Em seguida digite a senha definida no `ANSIBLE_PASSWORD=senha_ansible`
 
