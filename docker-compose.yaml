@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+
+  web-server:
+    build:
+      context: .
+      args:
+        - ANSIBLE_PASSWORD=${ANSIBLE_PASSWORD}
+    container_name: wordpress
+    restart: unless-stopped
+    ports:
+      - 80:80
+
+  mysql:
+    build:
+      context: .
+      args:
+        - ANSIBLE_PASSWORD=${ANSIBLE_PASSWORD}
+    container_name: mysql
+    restart: unless-stopped
+

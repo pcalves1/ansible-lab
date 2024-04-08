@@ -1,0 +1,5 @@
+[wordpress]
+wordpress-server ansible_host=<<IP_WORDPRESS>> ansible_user=ansible
+
+[mysql]
+mysql-server ansible_host=<<IP_DB>> ansible_user=ansible

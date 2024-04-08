@@ -1,0 +1,2 @@
+db_ip: "<<IP_DB>>"
+wp_dir: "/srv/www/wordpress"

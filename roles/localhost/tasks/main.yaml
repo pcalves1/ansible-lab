@@ -1,0 +1,18 @@
+---
+- name: Create a data container
+  docker_container:
+    name: mydata
+    image: ubuntu
+    command: [/bin/sh, -c, 'i=0; while true; do echo "$i: $(date)"; i=$((i+1)); sleep 1; done']
+    volumes:
+      - /data
+
+- name: Get infos on container
+  community.docker.docker_container_info:
+    name: mydata
+  register: result
+  
+- name: Print information about container
+  ansible.builtin.debug:
+    var: result.container
+  when: result.exists

@@ -1,0 +1,15 @@
+---
+- hosts: wordpress
+  vars_files:
+      - groups_vars/all.yaml
+      - groups_vars/wordpress.yaml
+  roles:
+  - apache
+  - wordpress
+
+- hosts: mysql
+  vars_files:
+    - groups_vars/all.yaml
+    - groups_vars/mysql.yaml
+  roles:
+  - mysql
