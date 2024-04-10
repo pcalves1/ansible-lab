@@ -5,7 +5,7 @@ An open source automation tool that can describe your IT infrastructure with YAM
 We're going to practice the configuration management functionality. We'll install and configure [*wordpress basics*](https://ubuntu.com/tutorials/install-and-configure-wordpress#1-overview) on *docker* stand alone and ansible to manage configurations containers. Let's set this computer on fire
 
 ### Pre requisites
-[Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installation-guide) and [SSH](https://ubuntu.com/server/docs/service-openssh)) on control node (The machine from which you run the Ansible CLI tools)
+[Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installation-guide) and [SSH](https://ubuntu.com/server/docs/service-openssh) on control node (The machine from which you run the Ansible CLI tools)
 
 ##### Control node
 It's the main machine which Ansible is installed... It will control all containers involved this lab. 
